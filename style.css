@@ -1,0 +1,117 @@
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #ddd;
+  overflow-x: hidden;
+  padding: 200px;
+}
+.intro {
+  background: url(https://images.unsplash.com/photo-1562362840-6985a3733d25?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80)
+    center/cover no-repeat;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  height: 25vh;
+  z-index: 3;
+  box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.5);
+  border-bottom: 2px solid goldenrod;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+h1 {
+  font-size: 5rem;
+  padding-top: 50px;
+  letter-spacing: 4px;
+  text-shadow: 2px 3px 2px #333;
+}
+.timeline {
+  top: 20vh;
+  height: 75vh;
+  position: relative;
+}
+
+ul {
+  padding: 50px 0;
+}
+li {
+  list-style: none;
+  position: relative;
+  width: 6px;
+  margin: 0 auto;
+  padding-top: 6px;
+  background: #333;
+  box-shadow: 0 0 10px 2px #333;
+}
+
+li::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  background: inherit;
+}
+li div {
+  position: relative;
+  bottom: 0;
+  height: 550px;
+  width: 350px;
+  border-radius: 5px;
+  box-shadow: 0 10px 15px 0 #333;
+  padding: 1em;
+}
+li div::before {
+  content: "";
+  position: absolute;
+  bottom: 7px;
+  height: 0;
+  width: 0;
+  border-style: solid;
+}
+
+li:nth-child(odd) div {
+  left: 3rem;
+}
+li:nth-child(even) div h2 {
+  text-align: right;
+}
+li:nth-child(odd) div::before {
+  left: -15px;
+  border-width: 8px 16px 8px 0px;
+  border-color: transparent orangered transparent transparent;
+}
+
+li:nth-child(even) div {
+  left: -439px;
+}
+
+li:nth-child(even) div::before {
+  right: -15px;
+  border-width: 8px 0px 8px 16px;
+  border-color: transparent transparent transparent orangered;
+}
+p {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 0.5rem;
+  margin-top: 2rem;
+}
+
+li:nth-child(1) div {
+  background: url(https://images.unsplash.com/photo-1643753664178-3217397c9e6a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80)
+    center/cover no-repeat;
+}
